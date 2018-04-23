@@ -1,0 +1,41 @@
+{%extends 'base.html' %}
+{% block content %}
+
+<div class="container col-md-7">
+
+
+
+<h1>Here are the properties in kharar location</h1>
+
+
+<table class="table table-bordered table-dark table-responsive">
+
+  <thead>
+
+    <tr>
+
+      <th scope="col">Location</th>
+      <th scope="col">Price(In Rupees)</th>
+      <th scope="col">Area(In sqft)</th>
+      <th scope="col">Sector</th>
+
+    </tr>
+  </thead>
+  <tbody>
+        {% for property in properties %}
+    <tr>
+
+      <td>{{property.location}}</td>
+      <td>{{property.price}}</td>
+      <td>{{property.area}}</td>
+      <td>{{property.sector}}</td>
+
+    </tr>
+
+{% endfor %}
+  </tbody>
+</table>
+</div>
+
+
+{% endblock %}
